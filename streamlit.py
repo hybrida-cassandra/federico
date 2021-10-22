@@ -94,7 +94,7 @@ fig_profit= go.Figure(
 st.subheader('Profit')
 st.plotly_chart(fig_profit)
 
-plot_partial_dependence(model, X_test, features=['google_spent'])
-plot_partial_dependence(model, X_test, features=['fb_spent'])
-plot_partial_dependence(model, X_test, features=['organico'])
-plot_partial_dependence(model, X_test, features=['cambio_penusd'])
+plot_partial_dependence(model, df, features=['google_spent'])
+plot_partial_dependence(model, df, features=['fb_spent'])
+plot_partial_dependence(model, df, features=['organico'])
+plot_partial_dependence(model, df, features=['cambio_penusd'])
