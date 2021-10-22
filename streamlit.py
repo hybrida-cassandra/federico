@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 from joblib import load
 import plotly.graph_objects as go
+from sklearn.inspection import permutation_importance, plot_partial_dependence
 
 @st.cache(allow_output_mutation=True)
 def load_model():
@@ -93,7 +94,7 @@ fig_profit= go.Figure(
 st.subheader('Profit')
 st.plotly_chart(fig_profit)
 
-plot_partial_dependence(pipe, X_test, features=['google_spent'])
-plot_partial_dependence(pipe, X_test, features=['fb_spent'])
-plot_partial_dependence(pipe, X_test, features=['organico'])
-plot_partial_dependence(pipe, X_test, features=['cambio_penusd'])
+plot_partial_dependence(model, X_test, features=['google_spent'])
+plot_partial_dependence(model, X_test, features=['fb_spent'])
+plot_partial_dependence(model, X_test, features=['organico'])
+plot_partial_dependence(model, X_test, features=['cambio_penusd'])
