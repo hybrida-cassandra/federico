@@ -20,6 +20,8 @@ def load_data():
 
 model = load_model()
 df = load_data()
+df=df.fillna( method='ffill')
+
 
 st.title('Welcome to Cassandra')
 
