@@ -42,7 +42,9 @@ for feat in categorical:
             display = ("","Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre")
         else:
             display = ("Si","No")
-     user_input[feat]=st.sidebar.selectbox(feat, unique_values,format_func=lambda x: display[x])
+            
+         
+    user_input[feat]=st.sidebar.selectbox(feat, unique_values,format_func=lambda x: display[x])
 
 numerical = ['fb_spent','google_spent','organico','cambio_penusd']
 
