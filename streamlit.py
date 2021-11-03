@@ -31,7 +31,7 @@ user_input= {}
 
 
 
-categorical = ['day_week', 'month','ios_14']
+categorical = ['day_week', 'month']
 
 for feat in categorical:
     unique_values = df[feat].unique()
