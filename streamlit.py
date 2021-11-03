@@ -38,7 +38,7 @@ for feat in categorical:
     if feat == 'day_week':
     	display = ("Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato")
     else:
-    	display = ("","Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre")
+    	display = ("Si","Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre")
     user_input[feat]=st.sidebar.selectbox(feat, unique_values,format_func=lambda x: display[x])
 
 
