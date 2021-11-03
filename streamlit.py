@@ -31,15 +31,15 @@ user_input= {}
 
 
 
-categorical = ['day_week', 'month']
+categorical = ['day_week', 'month','ios_14']
 
 for feat in categorical:
     unique_values = df[feat].unique()
     if feat == 'day_week':
     	display = ("Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato")
-    if feat == 'month' : 
+    else:
     	display = ("Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre")
-    user_input[feat]=st.sidebar.selectbox(feat, unique_values,format_func=lambda x: display[x])
+    user_input[feat]=st.sidebar.selectbox(feat, unique_values)
 
 
 numerical = ['fb_spent','google_spent','organico','cambio_penusd']
